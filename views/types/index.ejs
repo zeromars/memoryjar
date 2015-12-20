@@ -1,0 +1,6 @@
+<a href='/api/v1/types/create'>+Create</a>
+<ol>
+	<% types.forEach( function( model ){ %>
+	<li><%= model.text %>(<a href='/api/v1/types/delete/<%= model.id %>'>delete</a>|<a href='/api/v1/types/update/<%= model.id %>'>Update</a>|<a href='/api/v1/types/view/<%=model.id %>'>view</a>)</li>
+	<% }); %>
+</ol>

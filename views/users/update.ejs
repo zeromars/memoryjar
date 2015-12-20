@@ -1,0 +1,10 @@
+<a href='/api/v1/users/all'>List</a>
+<h2>User #<%=model.text %> Update form</h2>
+<form action='/api/v1/users/update/<%=model.id %>' method='POST'>
+	<table>
+		<tr><td>First Name<td><input type='text' name='User[firstname]' value='<%=model.firstname %>'><br/>
+		<tr><td>Last Name<td><input type='text' name='User[lastname]' value='<%=model.lastname %>'>
+		<tr><td>Email Address<td><input type='text' name='User[email]' value='<%=model.email %>'>
+		<tr><td>Last Login<td><input type='text' name='User[lastlogin]' value='<%=model.lastlogin %>'>
+		<tr ><td><td><input type='submit' value='SAVE'>
+</form>

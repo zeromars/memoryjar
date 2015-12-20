@@ -1,0 +1,53 @@
+{{#link-to "index"}}home{{/link-to}}
+{{#link-to "memory"}}memory{{/link-to}}
+{{#link-to "memories"}}memories{{/link-to}}
+{{#link-to "reminders"}}reminders{{/link-to}}
+{{#link-to "settings"}}settings{{/link-to}}
+{{#link-to "tags"}}tags{{/link-to}}
+{{#link-to "types"}}types{{/link-to}}
+{{#link-to "users"}}users{{/link-to}}
+
+<h2>Users</h2>
+
+<div>
+{{#each content as |user|}}
+<h1>{{user.firstname}} {{user.lastname}}</h1>
+
+<dl>
+  <dt>Email</dt>
+  <dd>{{user.email}}</dd>
+
+  <dt>Last Login</dt>
+  <dd>{{user.lastlogin}}</dd>
+</dl>
+<ul>
+{{#each user.memories as |memory|}}
+	<li>Memory: {{memory.text}} <span>{{memory.id}}</span></li>
+{{else}}
+  	<li>Sorry, no memories here.</li>
+{{/each}}
+{{#each user.reminders as |reminder|}}
+	<li>Reminder: {{reminder.text}} <span>{{reminder.id}}</span></li>
+{{else}}
+  	<li>Sorry, no reminders here.</li>
+{{/each}}
+{{#each user.settings as |setting|}}
+	<li>Setting: {{setting.text}} <span>{{setting.id}}</span></li>
+{{else}}
+  	<li>Sorry, no settings here.</li>
+{{/each}}
+{{#each user.tags as |tag|}}
+	<li>Tag: {{tag.text}} <span>{{tag.id}}</span></li>
+{{else}}
+  	<li>Sorry, no tags here.</li>
+{{/each}}
+</ul>
+<p>
+  Updated at: {{user.updatedAt}}
+  <br>
+  Created at: {{user.createdAt}}
+</p>
+{{else}}
+  Sorry, nobody is here.
+{{/each}}
+</div>

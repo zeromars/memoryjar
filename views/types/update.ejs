@@ -1,0 +1,7 @@
+<a href='/api/v1/types/all'>List</a>
+<h2>Type #<%=model.text %> Update form</h2>
+<form action='/api/v1/types/update/<%=model.id %>' method='POST'>
+	<table>
+		<tr><td>Text<td><input type='text' name='Type[text]' value='<%=model.text %>'>
+		<tr ><td><td><input type='submit' value='SAVE'>
+</form>

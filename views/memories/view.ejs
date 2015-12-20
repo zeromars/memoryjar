@@ -1,0 +1,11 @@
+<a href='/api/v1/memories/create'>+Create</a>|<a href='/api/v1/memories/recall'>List</a>|<a href='/api/v1/memories/update/<%= model.id %>'>Update</a>
+
+<h2>View <%=model.text%></h2>
+<ul>
+	<li>Text:<%=model.text %></li>
+	<li>Image:<%=model.image %></li>
+	<li>Tags:<%=model.tags %></li>
+	<li>User:<%=model.user %></li>
+	<li>Created At:<%=model.createdAt %></li>
+	<li>Updated At:<%=model.updatedAt %></li>
+</ul>

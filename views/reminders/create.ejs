@@ -1,0 +1,23 @@
+<a href='/api/v1/reminders/all'>List</a>
+<h2>Reminder Create form</h2>
+<form action='/api/v1/reminders/create' method='POST'>
+	<table>
+		<tr>
+			<td>User
+			<td><input type='text' name='Reminder[user]'>
+		<tr>
+			<td>Memory
+			<td><input type='text' name='Reminder[memory]'>
+		<tr>
+			<td>Text
+			<td><input type='text' name='Reminder[text]'><br/>
+		<tr>
+			<td>Message
+			<td><input type='text' name='Reminder[message]'><br/>
+		<tr>
+			<td>When
+			<td><input type='text' name='Reminder[when]'>
+		<tr>
+			<td>
+			<td><input type='submit' value='ADD'>
+</form>

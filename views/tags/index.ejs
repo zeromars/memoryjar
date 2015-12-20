@@ -1,0 +1,6 @@
+<a href='/api/v1/tags/create'>+Create</a>
+<ol>
+	<% tags.forEach( function( model ){ %>
+	<li><%= model.text %>(<%= model.type %>)-(<a href='/api/v1/tags/delete/<%= model.id %>'>delete</a>|<a href='/api/v1/tags/update/<%= model.id %>'>Update</a>|<a href='/api/v1/tags/view/<%=model.id %>'>view</a>)</li>
+	<% }); %>
+</ol>

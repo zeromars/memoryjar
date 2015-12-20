@@ -1,0 +1,9 @@
+<a href='/api/v1/settings/all'>List</a>
+<h2>Setting #<%=model.text %> Update form</h2>
+<form action='/api/v1/settings/update/<%=model.id %>' method='POST'>
+	<table>
+		<tr><td>Text<td><input type='text' name='Setting[text]' value='<%=model.text %>'><br/>
+		<tr><td>User<td><input type='text' name='Setting[user]' value='<%=model.user %>'>
+		<tr><td>Active<td><input type='text' name='Setting[active]' value='<%=model.active %>'>
+		<tr ><td><td><input type='submit' value='SAVE'>
+</form>

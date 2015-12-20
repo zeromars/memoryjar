@@ -1,0 +1,33 @@
+{{#link-to "index"}}home{{/link-to}}
+{{#link-to "memory"}}memory{{/link-to}}
+{{#link-to "memories"}}memories{{/link-to}}
+{{#link-to "reminders"}}reminders{{/link-to}}
+{{#link-to "settings"}}settings{{/link-to}}
+{{#link-to "tags"}}tags{{/link-to}}
+{{#link-to "types"}}types{{/link-to}}
+{{#link-to "users"}}users{{/link-to}}
+
+<h2>Tags</h2>
+
+<div>
+{{#each content as |tag|}}
+<h1>{{tag.text}}</h1>
+
+<dl>
+  <dt>Type</dt>
+  <dd>{{tag.type}}</dd>
+  <dt>Memory</dt>
+  <dd>{{tag.memory}}</dd>
+  <dt>User</dt>
+  <dd>{{tag.user}}</dd>
+</dl>
+
+<p>
+  Updated at: {{tag.updatedAt}}
+  <br>
+  Created at: {{tag.createdAt}}
+</p>
+{{else}}
+  Sorry, nobody is here.
+{{/each}}
+</div>

@@ -1,0 +1,35 @@
+{{#link-to "index"}}home{{/link-to}}
+{{#link-to "memory"}}memory{{/link-to}}
+{{#link-to "memories"}}memories{{/link-to}}
+{{#link-to "reminders"}}reminders{{/link-to}}
+{{#link-to "settings"}}settings{{/link-to}}
+{{#link-to "tags"}}tags{{/link-to}}
+{{#link-to "types"}}types{{/link-to}}
+{{#link-to "users"}}users{{/link-to}}
+
+<h2>Reminders</h2>
+
+<div>
+{{#each content as |reminder|}}
+<h1>{{reminder.text}}</h1>
+
+<dl>
+  <dt>Message</dt>
+  <dd>{{reminder.message}}</dd>
+  <dt>User</dt>
+  <dd>{{reminder.user}}</dd>
+  <dt>Memory</dt>
+  <dd>{{reminder.memory}}</dd>
+  <dt>When</dt>
+  <dd>{{reminder.when}}</dd>
+</dl>
+
+<p>
+  Updated at: {{reminder.updatedAt}}
+  <br>
+  Created at: {{reminder.createdAt}}
+</p>
+{{else}}
+  Sorry, nobody is here.
+{{/each}}
+</div>

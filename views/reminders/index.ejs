@@ -1,0 +1,6 @@
+<a href='/api/v1/reminders/create'>+Create</a>
+<ol>
+	<% reminders.forEach( function( model ){ %>
+	<li><%= model.text %>(<%= model.when %>)-(<a href='/api/v1/reminders/delete/<%= model.id %>'>delete</a>|<a href='/api/v1/reminders/update/<%= model.id %>'>Update</a>|<a href='/api/v1/reminders/view/<%=model.id %>'>view</a>)</li>
+	<% }); %>
+</ol>

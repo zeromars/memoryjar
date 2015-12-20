@@ -1,0 +1,27 @@
+<a href='/api/v1/users/create'>+Create</a>|<a href='/api/v1/users/all'>List</a>|<a href='/api/v1/users/update/<%= model.id %>'>Update</a>
+
+<h2>View <%=model.firstname%> <%=model.lastname%></h2>
+<ul>
+	<li>First name:<%=model.firstname %></li>
+	<li>Last Name:<%=model.lastname %></li>
+	<li>Email Address:<%=model.email %></li>
+	<li>Last Login:<%=model.lastlogin %></li>
+	<li>Memories:<%=model.memories %></li>
+	<% model.memories.forEach( function( data ){ %>
+	<li><%= data.text %>(<%= data.tags %>)</li>
+	<% }); %>
+	<li>Reminders:<%=model.reminders %></li>
+	<% model.reminders.forEach( function( data ){ %>
+	<li><%= data.text %>(<%= data.tags %>)</li>
+	<% }); %>
+	<li>Settings:<%=model.settings %></li>
+	<% model.settings.forEach( function( data ){ %>
+	<li><%= data.text %>(<%= data.tags %>)</li>
+	<% }); %>
+	<li>Tags:<%=model.tags %></li>
+	<% model.tags.forEach( function( data ){ %>
+	<li><%= data.text %>(<%= data.tags %>)</li>
+	<% }); %>
+	<li>Created At:<%=model.createdAt %></li>
+	<li>Updated At:<%=model.updatedAt %></li>
+</ul>

@@ -1,0 +1,29 @@
+{{#link-to "index"}}home{{/link-to}}
+{{#link-to "memory"}}memory{{/link-to}}
+{{#link-to "memories"}}memories{{/link-to}}
+{{#link-to "reminders"}}reminders{{/link-to}}
+{{#link-to "settings"}}settings{{/link-to}}
+{{#link-to "tags"}}tags{{/link-to}}
+{{#link-to "types"}}types{{/link-to}}
+{{#link-to "users"}}users{{/link-to}}
+
+<h2>Settings</h2>
+
+<div>
+{{#each content as |setting|}}
+<h1>{{setting.text}} ({{setting.active}})</h1>
+
+<dl>
+  <dt>User</dt>
+  <dd>{{setting.user}}</dd>
+</dl>
+
+<p>
+  Updated at: {{setting.updatedAt}}
+  <br>
+  Created at: {{setting.createdAt}}
+</p>
+{{else}}
+  Sorry, nobody is here.
+{{/each}}
+</div>

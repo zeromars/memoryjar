@@ -1,0 +1,11 @@
+<a href='/api/v1/reminders/all'>List</a>
+<h2>Reminder #<%=model.text %> Update form</h2>
+<form action='/api/v1/reminders/update/<%=model.id %>' method='POST'>
+	<table>
+		<tr><td>User<td><input type='text' name='Reminder[user]' value='<%=model.user %>'><br/>
+		<tr><td>Memory<td><input type='text' name='Reminder[memory]' value='<%=model.memory %>'>
+		<tr><td>Text<td><input type='text' name='Reminder[text]' value='<%=model.text %>'>
+		<tr><td>Message<td><input type='text' name='Reminder[message]' value='<%=model.message %>'><br/>
+		<tr><td>When<td><input type='text' name='Reminder[when]' value='<%=model.when %>'>
+		<tr ><td><td><input type='submit' value='SAVE'>
+</form>

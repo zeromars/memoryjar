@@ -1,0 +1,6 @@
+<a href='/api/v1/users/create'>+Create</a>
+<ol>
+	<% users.forEach( function( model ){ %>
+	<li><%= model.firstname %> <%= model.lastname %>(<%= model.id %>)-(<a href='/api/v1/users/delete/<%= model.id %>'>delete</a>|<a href='/api/v1/users/update/<%= model.id %>'>Update</a>|<a href='/api/v1/users/view/<%=model.id %>'>view</a>)</li>
+	<% }); %>
+</ol>

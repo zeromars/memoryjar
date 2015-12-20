@@ -1,0 +1,10 @@
+<a href='/api/v1/memories/recall'>List</a>
+<h2>Memory #<%=model.text %> Update form</h2>
+<form action='/api/v1/memories/update/<%=model.id %>' method='POST'>
+	<table>
+		<tr><td>Text<td><input type='text' name='Memory[text]' value='<%=model.text %>'><br/>
+		<tr><td>Image<td><input type='text' name='Memory[image]' value='<%=model.image %>'>
+		<tr><td>Tags<td><input type='text' name='Memory[tags]' value='<%=model.tags %>'>
+		<tr><td>User<td><input type='text' name='Memory[user]' value='<%=model.user %>'>
+		<tr ><td><td><input type='submit' value='SAVE'>
+</form>

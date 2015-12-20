@@ -1,0 +1,13 @@
+<a href='/api/v1/reminders/create'>+Create</a>|<a href='/api/v1/reminders/all'>List</a>|<a href='/api/v1/reminders/update/<%= model.id %>'>Update</a>
+
+<h2>View <%=model.text%></h2>
+<ul>
+	<li>Id:<%=model.id %></li>
+	<li>Text:<%=model.text %></li>
+	<li>User:<%=model.user %></li>
+	<li>Memory:<%=model.memory %></li>
+	<li>Message:<%=model.message %></li>
+	<li>When:<%=model.when %></li>
+	<li>Created At:<%=model.createdAt %></li>
+	<li>Updated At:<%=model.updatedAt %></li>
+</ul>

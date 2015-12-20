@@ -1,0 +1,25 @@
+{{#link-to "index"}}home{{/link-to}}
+{{#link-to "memory"}}memory{{/link-to}}
+{{#link-to "memories"}}memories{{/link-to}}
+
+<h2>Memory</h2>
+
+{{#each memory as |item|}}
+<h1>{{item.text}}</h1>
+
+<dl>
+  <dt>Image</dt>
+  <dd>{{item.image}}</dd>
+
+  <dt>Tags</dt>
+  <dd>{{item.tags}}</dd>
+</dl>
+
+<p>
+  Updated at: {{item.updatedAt}}
+  <br>
+  Created at: {{item.createdAt}}
+</p>
+{{else}}
+  Sorry, nobody is here.
+{{/each}}

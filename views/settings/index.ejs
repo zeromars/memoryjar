@@ -1,0 +1,6 @@
+<a href='/api/v1/settings/create'>+Create</a>
+<ol>
+	<% settings.forEach( function( model ){ %>
+	<li><%= model.text %>(<%= model.active %>)-(<a href='/api/v1/settings/delete/<%= model.id %>'>delete</a>|<a href='/api/v1/settings/update/<%= model.id %>'>Update</a>|<a href='/api/v1/settings/view/<%=model.id %>'>view</a>)</li>
+	<% }); %>
+</ol>

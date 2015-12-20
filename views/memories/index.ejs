@@ -1,0 +1,6 @@
+<a href='/api/v1/memories/create'>+Create</a>
+<ol>
+	<% memories.forEach( function( model ){ %>
+	<li><%= model.text %>(<%= model.tags %>)-(<a href='/api/v1/memories/delete/<%= model.id %>'>delete</a>|<a href='/api/v1/memories/update/<%= model.id %>'>Update</a>|<a href='/api/v1/memories/view/<%=model.id %>'>view</a>)</li>
+	<% }); %>
+</ol>
